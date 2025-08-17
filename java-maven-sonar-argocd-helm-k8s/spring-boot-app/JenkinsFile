@@ -1,7 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'sasibk/maven-sasiram-docker-agent:v3'
+      //image 'sasibk/maven-sasiram-docker-agent:v3'
+      image 'sasibk/mvn-docker-git:v1'
       //image 'maven:3.9.9-eclipse-temurin-17-alpine'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
       reuseNode false 
